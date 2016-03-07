@@ -1,0 +1,9 @@
+.log-in-form {
+  border: 1px solid $iron;
+  padding: $global-padding;
+  border-radius: $global-radius;
+  background-color: $white;
+  @include opacity(0.7);
+}
+
+

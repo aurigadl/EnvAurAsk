@@ -1,0 +1,17 @@
+#banner {
+  @include background-size(cover);
+  height: 100%;
+  & body {
+    height:100%;
+  }
+
+  background: {
+    image: image-url("http://placehold.it/2000x1500", true);
+    repeat: no-repeat;
+    position: top left;
+  };
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
