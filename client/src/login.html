@@ -1,0 +1,23 @@
+<template>
+  <div id="banner">
+    <div class="row">
+      <div class="medium-6 medium-centered large-5 large-centered columns">
+        <form submit.delegate="login()">
+          <div class="column log-in-form">
+            <h4 class="text-center">Log in with you email account</h4>
+            <label>Email
+              <input type="text" placeholder="somebody@example.com" value.bind="username">
+            </label>
+            <label>Password
+              <input type="password" placeholder="Password" value.bind="password" >
+            </label>
+            <input id="show-password" type="checkbox"><label for="show-password">Show password</label>
+            <p><button type="submit" class="button expand radius">Login</button></p>
+		        <span class="text-danger">${error}</span>
+            <p class="text-center"><a href="#">Forgot your password?</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
