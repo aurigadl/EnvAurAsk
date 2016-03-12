@@ -1,12 +1,31 @@
+import 'bootstrap';
+import { inject  } from 'aurelia-framework';
+import AuthService from 'AuthService';
+
+@inject(AuthService)
 export class App {
+
+  constructor(AuthService) {
+    this.auth = AuthService;
+  }
+
   configureRouter(config, router) {
-    config.title = 'Aurelia';
+    config.title = 'Answer me';
     config.map([
-      { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',      nav: true, title: 'Welcome' },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users' },
-      { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title: 'Child Router' }
-    ]);
+        { route: 'wizard', name: 'wizard', moduleId: 'users', nav: true, title: 'wizard test' }
+        ]);
 
     this.router = router;
   }
+
 }
+
+
+export class ToJSONValueConverter {
+  toView(obj) {
+    if (obj) {
+      return JSON.stringify(obj, null, 2)
+    }
+  }
+}
+

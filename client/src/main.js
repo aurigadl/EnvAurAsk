@@ -1,16 +1,16 @@
-import 'bootstrap';
+import AuthService from 'AuthService';
 
 export function configure(aurelia) {
-  aurelia.use
+	aurelia.use
     .standardConfiguration()
     .developmentLogging();
 
-  //Uncomment the line below to enable animation.
-  //aurelia.use.plugin('aurelia-animator-css');
-  //if the css animator is enabled, add swap-order="after" to all router-view elements
-
-  //Anyone wanting to use HTMLImports to load views, will need to install the following plugin.
-  //aurelia.use.plugin('aurelia-html-import-template-loader')
-
-  aurelia.start().then(() => aurelia.setRoot());
+  // After starting the aurelia, we can request the AuthService directly
+  // from the DI container on the aurelia object. We can then set the 
+  // correct root by querying the AuthService's isAuthenticated method.
+  aurelia.start().then(() => {
+	  	var auth = aurelia.container.get(AuthService);
+	    let root = auth.isAuthenticated() ? 'app' : 'login';
+	    aurelia.setRoot(root);
+  	});
 }
