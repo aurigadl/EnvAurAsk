@@ -34,6 +34,7 @@ System.config({
     "font-awesome": "npm:font-awesome@4.5.0",
     "jquery": "npm:jquery@2.2.1",
     "jquery-steps": "github:rstaib/jquery-steps@1.1.0",
+    "jquery-validation": "github:jzaefferer/jquery-validation@1.15.0",
     "jquery.cookie": "npm:jquery.cookie@1.4.1",
     "text": "github:systemjs/plugin-text@0.0.3",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -47,6 +48,9 @@ System.config({
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
+    },
+    "github:jzaefferer/jquery-validation@1.15.0": {
+      "jquery": "npm:jquery@2.2.1"
     },
     "github:twbs/bootstrap@3.3.6": {
       "jquery": "github:components/jquery@2.2.0"

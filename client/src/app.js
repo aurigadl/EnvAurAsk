@@ -1,7 +1,8 @@
 import 'bootstrap';
 import { inject  } from 'aurelia-framework';
 import AuthService from 'AuthService';
-import steps from 'jquery-steps';
+import {steps} from 'jquery-steps';
+import {valid, validate, validator} from 'jquery-validation';
 
 @inject(AuthService)
 
@@ -28,7 +29,10 @@ export class App {
         headerTag: "h3",
         bodyTag: "section",
         transitionEffect: "slideLeft",
-        stepsOrientation: "vertical"
+        stepsOrientation: "vertical",
+        onFinished: function (event, currentIndex){
+              alert("Submitted!");
+        }
     })
   }
 }
