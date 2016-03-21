@@ -9,7 +9,7 @@ export class App {
 
   constructor(AuthService) {
     this.auth = AuthService;
-    this.data = {};
+    this.datos = {};
   }
 
   configureRouter(config, router) {
@@ -22,30 +22,13 @@ export class App {
   }
 
   activate() {
-    this.data = JSON.stringify({quest: [
-        {id: "10001", quest: "Esta es la pregunta numero 1" ,no_options: 1,
-          options: ["esta es la numero 1", "otra cosa", "mas cosas", "la verdadera"],
-          picture: "http://placehold.it/350x150"},
-        {id: "10002", quest: "Esta es la pregunta numero 2" ,no_options: 1,
-          options: ["esta es la numero 1", "otra cosa", "mas cosas", "la verdadera"]},
-        {id: "10003", quest: "Esta es la pregunta numero 3" ,no_options: 1,
-          options: ["esta es la numero 1", "otra cosa", "mas cosas", "la verdadera"],
-          picture: "http://placehold.it/350x150"},
-        {id: "10004", quest: "Esta es la pregunta numero 4" ,no_options: 1,
-          options: ["esta es la numero 1", "otra cosa", "mas cosas", "la verdadera"]},
-        {id: "10005", quest: "Esta es la pregunta numero 5" ,no_options: 1,
-          options: ["esta es la numero 1", "otra cosa", "mas cosas", "la verdadera"],
-          picture: "http://placehold.it/350x150"},
-        {id: "10006", quest: "Esta es la pregunta numero 6" ,no_options: 1,
-          options: ["esta es la numero 1", "otra cosa", "mas cosas", "la verdadera"],
-          picture: "http://placehold.it/350x150"},
-        {id: "10007", quest: "Esta es la pregunta numero 7" ,no_options: 1,
-          options: ["esta es la numero 1", "otra cosa", "mas cosas", "la verdadera"],
-          picture: "http://placehold.it/350x150"},
-        {id: "10008", quest: "Esta es la pregunta numero 8" ,no_options: 1,
-          options: ["esta es la numero 1", "otra cosa", "mas cosas", "la verdadera"],
-          picture: "http://placehold.it/350x150"}
-        ]}, null, 2);
+    this.datos = {"quests": [
+                    {"id": 10000, "quest": "Esta es la pregunta numero 0" ,"no_options": 1,"options": [{"no": 1, "label": "esta es la numero 1"}, {"no": 2, "label":"otra cosa"}, {"no": 3, "label": "mas cosas"}, {"no": 4, "label": "la verdadera"}], "picture": "http://placehold.it/650x350"},
+                    {"id": 10002, "quest": "Esta es la pregunta numero 2" ,"no_options": 1,"options": [{"no": 1, "label": "esta es la numero 1"}, {"no": 2, "label":"otra cosa"}, {"no": 3, "label": "mas cosas"}, {"no": 4, "label": "la verdadera"}]},
+                    {"id": 10001, "quest": "Esta es la pregunta numero 1" ,"no_options": 1,"options": [{"no": 1, "label": "esta es la numero 1"}, {"no": 2, "label":"otra cosa"}, {"no": 3, "label": "mas cosas"}, {"no": 4, "label": "la verdadera"}], "picture": "http://placehold.it/550x350"}
+      ],
+        "topic": "señales de transito"
+    };
   }
 
 

@@ -22,6 +22,8 @@
 .wizard ul > li, .tabcontrol ul > li {
   display: block;
   padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Accessibility */
@@ -177,9 +179,7 @@
     .content > .body {
       float: left;
       position: absolute;
-      width: 95%;
-      height: 95%;
-      padding: 2.5%;
+      padding: 1.5% 4.5%;
 
       ul {
         list-style: disc !important;

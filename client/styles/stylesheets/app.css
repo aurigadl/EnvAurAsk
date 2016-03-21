@@ -2567,10 +2567,12 @@ label.error {
 .wizard ul > li, .tabcontrol ul > li {
   display: block;
   padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Accessibility */
-/* line 29, ../scss/_steps.scss */
+/* line 31, ../scss/_steps.scss */
 .wizard > .steps .current-info, .tabcontrol > .steps .current-info, .wizard > .content > .title, .tabcontrol > .content > .title {
   position: absolute;
   left: -999em;
@@ -2579,55 +2581,55 @@ label.error {
 /*
     Wizard
 */
-/* line 39, ../scss/_steps.scss */
+/* line 41, ../scss/_steps.scss */
 .wizard > .steps {
   position: relative;
   display: block;
   width: 100%;
 }
-/* line 46, ../scss/_steps.scss */
+/* line 48, ../scss/_steps.scss */
 .wizard.vertical > .steps {
   display: inline;
   float: left;
   width: 30%;
 }
-/* line 52, ../scss/_steps.scss */
+/* line 54, ../scss/_steps.scss */
 .wizard.vertical > .steps > ul > li {
   float: none;
   width: 100%;
 }
-/* line 57, ../scss/_steps.scss */
+/* line 59, ../scss/_steps.scss */
 .wizard.vertical > .content {
   display: inline;
   float: left;
   margin: 0 2.5% 0.5em 2.5%;
   width: 65%;
 }
-/* line 64, ../scss/_steps.scss */
+/* line 66, ../scss/_steps.scss */
 .wizard.vertical > .actions {
   display: inline;
   float: right;
   margin: 0 2.5%;
   width: 95%;
 }
-/* line 71, ../scss/_steps.scss */
+/* line 73, ../scss/_steps.scss */
 .wizard.vertical > .actions > ul > li {
   margin: 0 0 0 1em;
 }
-/* line 78, ../scss/_steps.scss */
+/* line 80, ../scss/_steps.scss */
 .wizard > .steps .number {
   font-size: 1.429em;
 }
-/* line 82, ../scss/_steps.scss */
+/* line 84, ../scss/_steps.scss */
 .wizard > .steps > ul > li {
   width: 25%;
   float: left;
 }
-/* line 88, ../scss/_steps.scss */
+/* line 90, ../scss/_steps.scss */
 .wizard > .actions > ul > li {
   float: left;
 }
-/* line 95, ../scss/_steps.scss */
+/* line 97, ../scss/_steps.scss */
 .wizard > .steps a {
   display: block;
   width: auto;
@@ -2638,7 +2640,7 @@ label.error {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 105, ../scss/_steps.scss */
+/* line 107, ../scss/_steps.scss */
 .wizard > .steps a:hover, .wizard > .steps a:active {
   display: block;
   width: auto;
@@ -2649,51 +2651,51 @@ label.error {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 117, ../scss/_steps.scss */
+/* line 119, ../scss/_steps.scss */
 .wizard > .steps .disabled a {
   background: #eee;
   color: #aaa;
   cursor: default;
 }
-/* line 122, ../scss/_steps.scss */
+/* line 124, ../scss/_steps.scss */
 .wizard > .steps .disabled a:hover, .wizard > .steps .disabled a:active {
   background: #eee;
   color: #aaa;
   cursor: default;
 }
-/* line 129, ../scss/_steps.scss */
+/* line 131, ../scss/_steps.scss */
 .wizard > .steps .current a {
   background: #2184be;
   color: #fff;
   cursor: default;
 }
-/* line 134, ../scss/_steps.scss */
+/* line 136, ../scss/_steps.scss */
 .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
   background: #2184be;
   color: #fff;
   cursor: default;
 }
-/* line 141, ../scss/_steps.scss */
+/* line 143, ../scss/_steps.scss */
 .wizard > .steps .done a {
   background: #9dc8e2;
   color: #fff;
 }
-/* line 145, ../scss/_steps.scss */
+/* line 147, ../scss/_steps.scss */
 .wizard > .steps .done a:hover, .wizard > .steps .done a:active {
   background: #9dc8e2;
   color: #fff;
 }
-/* line 151, ../scss/_steps.scss */
+/* line 153, ../scss/_steps.scss */
 .wizard > .steps .error a {
   background: #ff3111;
   color: #fff;
 }
-/* line 155, ../scss/_steps.scss */
+/* line 157, ../scss/_steps.scss */
 .wizard > .steps .error a:hover, .wizard > .steps .error a:active {
   background: #ff3111;
   color: #fff;
 }
-/* line 162, ../scss/_steps.scss */
+/* line 164, ../scss/_steps.scss */
 .wizard > .content {
   background: #eee;
   display: block;
@@ -2706,13 +2708,11 @@ label.error {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 177, ../scss/_steps.scss */
+/* line 179, ../scss/_steps.scss */
 .wizard > .content > .body {
   float: left;
   position: absolute;
-  width: 95%;
-  height: 95%;
-  padding: 2.5%;
+  padding: 1.5% 4.5%;
   /*
         input {
           display: block;
