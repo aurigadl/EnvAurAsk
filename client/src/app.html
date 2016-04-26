@@ -1,4 +1,8 @@
+
 <template>
+<require from='nav-bar'></require>
+<nav-bar router.bind="router"></nav-bar>
+
   <div class="column contentbox">
     <form id="example-vertical" action="#">
         <h3 repeat.for="dato of datos.quests">${$index}</h3>
