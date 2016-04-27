@@ -1,5 +1,11 @@
-import {bindable} from 'aurelia-framework';
+import { inject, bindable } from 'aurelia-framework';
+import AuthService from 'AuthService';
 
+@inject(AuthService)
 export class NavBar {
   @bindable router = null;
+
+  constructor(AuthService) {
+    this.logout = AuthService.logout;
+  }
 }
