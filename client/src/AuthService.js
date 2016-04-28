@@ -47,7 +47,7 @@ export default class AuthService {
 		this.session = null;
 
 		// .. and set root to login.
-		this.app.setRoot('nav-bar')
+		this.app.setRoot('login')
 	}
 
 	isAuthenticated() {
