@@ -16,7 +16,7 @@ export class App {
     config.title = 'Answer me';
     config.map([
         { route: 'wizard', name: 'wizard', moduleId: 'users', nav: true, title: 'wizard test' },
-        { route: 'logout', name: 'logout', moduleId: 'users', nav: true, title: 'log out' }
+        { route: ['', 'login'], name: 'login', moduleId: 'login', nav: true, title: 'login' }
         ]);
 
     this.router = router;

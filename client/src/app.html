@@ -1,7 +1,6 @@
-
 <template>
-<require from='nav-bar'></require>
-<nav-bar router.bind="router"></nav-bar>
+  <require from='nav-bar'></require>
+  <nav-bar router.bind="router"></nav-bar>
 
   <div class="column contentbox">
     <form id="example-vertical" action="#">
@@ -11,7 +10,8 @@
           <div class="row">
             <div class="small-6 large-6 columns">
               <div class="row" repeat.for="option of dato.options">
-                  <input type="radio" name="${dato.id}" value="${option.no}" id="${dato.id}_${option.no}" class="required"><label for="${dato.id}_${option.no}">${option.label}</label>
+                  <input type="radio" name="${dato.id}" value="${option.no}" id="${dato.id}_${option.no}" class="required">
+                  <label for="${dato.id}_${option.no}">${option.label}</label>
               </div>
             </div>
             <div class="small-6 large-6 columns" if.bind="dato.picture">
